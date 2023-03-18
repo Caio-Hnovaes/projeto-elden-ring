@@ -1,0 +1,163 @@
+body {
+    background-color: rgb(196, 31, 31);
+    font-family: 'Titillium Web', sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.conteudo{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    justify-content: space-evenly;    
+}
+
+.informacoes .logo{
+    margin-top: 30px;
+    max-width: 400px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+.informacoes .descricao{
+    margin-left: 15px;
+    width: 49%;
+    font-size: 22px;
+    color: white;
+    line-height: 30px;
+    background-color: rgba(0, 0, 0, 0.234);
+    padding: 20px;
+    border-radius: 30px;    
+}
+
+.comprar{
+    margin-left: 20px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    background-color: rgba(7, 28, 23, 0);
+    color: rgb(255, 255, 255);
+    width: 200px;
+    padding: 20px 14px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: solid;
+
+    font-weight: bold;
+    cursor: pointer;
+
+    transition: all .350s ease-in-out;
+}
+
+.comprar:hover {
+    background: rgb(193, 157, 83);
+    color: rgb(255, 255, 255);
+    transform: scale(1.1);
+}
+
+.botoes-carrossel{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.botoes-carrossel .botao{
+    background-color: rgba(7, 28, 23, 0);
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: solid transparent;
+    cursor: pointer;
+    border-color: white;
+}
+
+.botoes-carrossel .botao.selecionado{
+    background-color: rgb(193, 157, 83);
+}
+
+div.video{
+    margin-top: 7px;
+    margin-bottom: 40px;
+    margin: 20px;
+    padding: 150px;
+    padding-bottom: 50%;
+    position: relative;
+}
+
+div.video > iframe {
+    margin-left: -35px;
+    position: absolute;
+    top: 20%;
+    width: 70%;
+    height: 70%;
+}
+
+.menu-lateral{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.menu-lateral ul{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.menu-lateral .icone{
+    width: 30px;
+    filter: invert(1);
+    transition: 0.70s ease-in-out;
+}
+
+.menu-lateral .iconebandai{
+    width: 40px;
+    transition: 0.70s ease-in-out;
+}
+
+.menu-lateral .icone:hover{
+    transform: scale(1.2);
+}
+
+.menu-lateral .iconebandai:hover{
+    transform: scale(1.2);
+}
+
+.carrossel{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+}
+
+.carrossel .imagem{
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    animation:mudarImagem 0.7s;
+}
+
+.carrossel .imagem.ativa{
+    display: block;
+}
+
+@keyframes mudarImagem{
+    from{
+        opacity: 0.85;  
+    }
+    to{
+      opacity: 1;
+    }
+}
+
+
+
